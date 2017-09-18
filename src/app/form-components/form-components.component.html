@@ -1,5 +1,12 @@
-<div class="section">
-    <div class="col-lg-6 form-component" (click) = "displayFormComponent('radio_button')">
-        Radio button
-    </div>
-</div>
+<ng-template #modal let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Radio Button</h4>
+  </div>
+  <div class="modal-body">
+    <p>Stuff will go here</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="saveForm()">Save</button>
+    <button type="button" class="btn btn-outline-dark" (click)="cancelForm()">Cancel</button>
+  </div>
+</ng-template>
