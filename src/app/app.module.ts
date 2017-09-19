@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { FormComponentsComponent } from './form-components/form-components.component';
 import { MasterComponentComponent } from './master-component/master-component.component';
 import { MainboardComponent } from './mainboard/mainboard.component';
+import { ComponentModalComponent } from './form-components/component-modal/component-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponentsComponent,
     MasterComponentComponent,
-    MainboardComponent
+    MainboardComponent,
+    ComponentModalComponent
   ],
   imports: [
     BrowserModule,

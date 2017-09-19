@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+
+import { ComponentModalComponent } from './component-modal/component-modal.component';
 
 @Component({
   selector: 'app-form-components',
@@ -10,11 +12,17 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 export class FormComponentsComponent{
   closeResult: string;
+  components: Array<string>;
+  @ViewChild(ComponentModalComponent) modalel: ComponentModalComponent;
 
-  constructor(private modalService: NgbModal) { }
+  constructor(private modalService: NgbModal) {
+  	this.components = ['Radio Button'];
+  }
 
- open(content) {
-    this.modalService.open(content).result.then((result) => {
+ open(index) {
+ 	console.log(index);
+ 	this.modalel.setName(this.components[index]);
+ 	this.modalService.open(this.modalel.el).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
