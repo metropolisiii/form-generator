@@ -3,7 +3,7 @@
 <div class="section">  
     <div *ngFor = "let component of components; let i = index" class="col-lg-6 form-component">
         <div (click) = "open(i)">
-        	{{ component }}
+        	{{ component.name }}
        	</div>
     </div>
 </div>

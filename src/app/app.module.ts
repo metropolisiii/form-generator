@@ -7,6 +7,7 @@ import { FormComponentsComponent } from './form-components/form-components.compo
 import { MasterComponentComponent } from './master-component/master-component.component';
 import { MainboardComponent } from './mainboard/mainboard.component';
 import { ComponentModalComponent } from './form-components/component-modal/component-modal.component';
+import { RadioComponentComponent } from './form-components/components/radio-component/radio-component.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ComponentModalComponent } from './form-components/component-modal/compo
     FormComponentsComponent,
     MasterComponentComponent,
     MainboardComponent,
-    ComponentModalComponent
+    ComponentModalComponent,
+    RadioComponentComponent
   ],
   imports: [
     BrowserModule,
