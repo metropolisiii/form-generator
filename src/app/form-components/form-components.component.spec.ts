@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {NgbModule, NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+
 
 import { FormComponentsComponent } from './form-components.component';
+import { ComponentModalComponent } from './component-modal/component-modal.component';
 
 describe('FormComponentsComponent', () => {
   let component: FormComponentsComponent;
@@ -8,7 +11,8 @@ describe('FormComponentsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormComponentsComponent ]
+      declarations: [ FormComponentsComponent, ComponentModalComponent ],
+      imports: [NgbModule.forRoot()]
     })
     .compileComponents();
   }));
