@@ -3,7 +3,14 @@
     <h4 class="modal-title">{{  name }}</h4>
   </div>
   <div class="modal-body">
-    <p>Stuff will go here</p>
+    <form>
+      <div class="col-xs-12">
+        <textarea name="comp-label"></textarea>
+      </div>
+      <div *ngIf="additionalOptions" class="col-lg-6">
+         <app-choices></app-choices>  
+      </div>
+    </form>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="saveForm()">Save</button>

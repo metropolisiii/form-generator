@@ -25,6 +25,8 @@ export class FormComponentsComponent{
 
  open(index) {
  	this.modalel.setName(this.components[index].name);
+  console.log(this.components[index]);
+  this.modalel.setAdditionalOptions(this.components[index].hasAdditionalOptions);
  	this.modalService.open(this.modalel.el).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {

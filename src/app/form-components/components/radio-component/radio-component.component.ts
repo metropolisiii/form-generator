@@ -8,8 +8,13 @@ import { IFormComponent } from '../iformcomponent.type';
   styleUrls: ['./radio-component.component.css']
 })
 export class RadioComponentComponent implements OnInit, IFormComponent {
-  name = "Radio Button";
-  constructor() { }
+  name: string;
+  hasAdditionalOptions: boolean;
+
+  constructor() { 
+  	this.name = "Radio Button";
+  	this.hasAdditionalOptions = true;
+  }
 
   ngOnInit() {
   }

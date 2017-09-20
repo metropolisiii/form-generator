@@ -8,17 +8,22 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 export class ComponentModalComponent implements OnInit {
   @ViewChild('modal') el: ElementRef;
 
-  name: String;
+  name: string;
+  additionalOptions: boolean;
 
   constructor() {
   	this.name = "";
+    this.additionalOptions = false;
   }
 
   ngOnInit() {
   }
 
-  setName(name: String){
+  setName(name: string){
   	this.name=name;
   }
 
+  setAdditionalOptions(hasAdditionalOptions: boolean){
+    this.additionalOptions=hasAdditionalOptions;
+  }
 }
