@@ -10,6 +10,7 @@ import { ComponentModalComponent } from './form-components/component-modal/compo
 import { RadioComponentComponent } from './form-components/components/radio-component/radio-component.component';
 import { ChoicesComponent } from './form-components/components/shared/choices/choices.component';
 import { OptionsComponent } from './form-components/components/shared/options/options.component';
+import { TextInputComponent } from './form-components/components/text-input/text-input.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { OptionsComponent } from './form-components/components/shared/options/op
     ComponentModalComponent,
     RadioComponentComponent,
     ChoicesComponent,
-    OptionsComponent
+    OptionsComponent,
+    TextInputComponent
   ],
   imports: [
     BrowserModule,

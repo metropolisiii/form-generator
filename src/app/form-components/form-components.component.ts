@@ -6,12 +6,13 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { IFormComponent } from './components/iformcomponent.type';
 import { ComponentModalComponent } from './component-modal/component-modal.component';
 import { RadioComponentComponent } from './components/radio-component/radio-component.component';
+import { TextInputComponent } from './components/text-input/text-input.component';
 
 @Component({
   selector: 'app-form-components',
   templateUrl: './form-components.component.html',
   styleUrls: ['./form-components.component.css'],
-  providers: [RadioComponentComponent]
+  providers: [RadioComponentComponent, TextInputComponent]
 })
 
 export class FormComponentsComponent{
@@ -19,8 +20,10 @@ export class FormComponentsComponent{
   components: Array<IFormComponent>;
   @ViewChild(ComponentModalComponent) modalel: ComponentModalComponent;
 
-  constructor(private modalService: NgbModal, private radio: RadioComponentComponent) {
-  	this.components = [radio];
+  constructor(private modalService: NgbModal, 
+              private radio: RadioComponentComponent,
+              private text: TextInputComponent) {
+  	this.components = [radio, text];
   }
 
  open(index) {
