@@ -9,6 +9,7 @@ import { MainboardComponent } from './mainboard/mainboard.component';
 import { ComponentModalComponent } from './form-components/component-modal/component-modal.component';
 import { RadioComponentComponent } from './form-components/components/radio-component/radio-component.component';
 import { ChoicesComponent } from './form-components/components/shared/choices/choices.component';
+import { OptionsComponent } from './form-components/components/shared/options/options.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ChoicesComponent } from './form-components/components/shared/choices/ch
     MainboardComponent,
     ComponentModalComponent,
     RadioComponentComponent,
-    ChoicesComponent
+    ChoicesComponent,
+    OptionsComponent
   ],
   imports: [
     BrowserModule,
