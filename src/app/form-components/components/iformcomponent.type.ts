@@ -1,4 +1,3 @@
-export interface IFormComponent{
-	name: string;
-	hasAdditionalOptions: boolean;
+export interface IFormComponent {
+  name: string;
 }

@@ -9,21 +9,15 @@ export class ComponentModalComponent implements OnInit {
   @ViewChild('modal') el: ElementRef;
 
   name: string;
-  additionalOptions: boolean;
 
   constructor() {
-  	this.name = "";
-    this.additionalOptions = false;
+    this.name = '';
   }
 
   ngOnInit() {
   }
 
-  setName(name: string){
-  	this.name=name;
-  }
-
-  setAdditionalOptions(hasAdditionalOptions: boolean){
-    this.additionalOptions=hasAdditionalOptions;
+  setName(name: string) {
+    this.name = name;
   }
 }

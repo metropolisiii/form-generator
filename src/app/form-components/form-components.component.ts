@@ -15,27 +15,25 @@ import { TextInputComponent } from './components/text-input/text-input.component
   providers: [RadioComponentComponent, TextInputComponent]
 })
 
-export class FormComponentsComponent{
+export class FormComponentsComponent {
   closeResult: string;
   components: Array<IFormComponent>;
   @ViewChild(ComponentModalComponent) modalel: ComponentModalComponent;
 
-  constructor(private modalService: NgbModal, 
+  constructor(private modalService: NgbModal,
               private radio: RadioComponentComponent,
               private text: TextInputComponent) {
-  	this.components = [radio, text];
+    this.components = [radio, text];
   }
 
  open(index) {
- 	this.modalel.setName(this.components[index].name);
-  console.log(this.components[index]);
-  this.modalel.setAdditionalOptions(this.components[index].hasAdditionalOptions);
- 	this.modalService.open(this.modalel.el).result.then((result) => {
+   this.modalel.setName(this.components[index].name);
+   console.log(this.components[index]);
+   this.modalService.open(this.modalel.el).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
- 	
   }
 
   private getDismissReason(reason: any): string {

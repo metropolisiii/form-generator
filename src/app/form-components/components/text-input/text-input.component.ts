@@ -11,8 +11,7 @@ export class TextInputComponent implements OnInit, IFormComponent {
   hasAdditionalOptions: boolean;
 
   constructor() {
-  	this.name = "Text Input";
-  	this.hasAdditionalOptions = false;
+    this.name = 'Text Input';
   }
 
   ngOnInit() {
