@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IFormComponent } from '../iformcomponent.type';
 
 @Component({
@@ -8,10 +8,11 @@ import { IFormComponent } from '../iformcomponent.type';
 })
 export class TextInputComponent implements OnInit, IFormComponent {
   name: string;
-  hasAdditionalOptions: boolean;
-
+  type: object;
+  
   constructor() {
     this.name = 'Text Input';
+    this.type = TextInputComponent;
   }
 
   ngOnInit() {

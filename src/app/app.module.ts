@@ -32,7 +32,8 @@ import { ModalFooterComponent } from './form-components/modal-footer/modal-foote
     NgbModule.forRoot()
   ],
   entryComponents: [
-    TextInputComponent
+    TextInputComponent,
+    RadioComponentComponent
   ],  
   providers: [NgbActiveModal],
   bootstrap: [AppComponent]

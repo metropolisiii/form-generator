@@ -9,9 +9,11 @@ import { IFormComponent } from '../iformcomponent.type';
 })
 export class RadioComponentComponent implements OnInit, IFormComponent {
   name: string;
+  type: object;
 
   constructor() {
     this.name = 'Radio Button';
+    this.type = RadioComponentComponent;
   }
 
   ngOnInit() {
