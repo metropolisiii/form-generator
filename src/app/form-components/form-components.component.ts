@@ -4,7 +4,6 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 
 import { IFormComponent } from './components/iformcomponent.type';
-import { ComponentModalComponent } from './component-modal/component-modal.component';
 import { RadioComponentComponent } from './components/radio-component/radio-component.component';
 import { TextInputComponent } from './components/text-input/text-input.component';
 
@@ -18,7 +17,6 @@ import { TextInputComponent } from './components/text-input/text-input.component
 export class FormComponentsComponent {
   closeResult: string;
   components: Array<IFormComponent>;
-  @ViewChild(ComponentModalComponent) modalel: ComponentModalComponent;
 
   constructor(private modalService: NgbModal,
               private radio: RadioComponentComponent,
@@ -27,7 +25,7 @@ export class FormComponentsComponent {
   }
 
  open(index) {
-   this.modalel.setName(this.components[index].name);
+   //this.modalel.setName(this.components[index].name);
    this.modalService.open(TextInputComponent).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {

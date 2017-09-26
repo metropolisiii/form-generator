@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { FormComponentsComponent } from './form-components/form-components.component';
 import { MasterComponentComponent } from './master-component/master-component.component';
 import { MainboardComponent } from './mainboard/mainboard.component';
-import { ComponentModalComponent } from './form-components/component-modal/component-modal.component';
 import { RadioComponentComponent } from './form-components/components/radio-component/radio-component.component';
 import { ChoicesComponent } from './form-components/components/shared/choices/choices.component';
 import { OptionsComponent } from './form-components/components/shared/options/options.component';
@@ -21,7 +20,6 @@ import { ModalFooterComponent } from './form-components/modal-footer/modal-foote
     FormComponentsComponent,
     MasterComponentComponent,
     MainboardComponent,
-    ComponentModalComponent,
     RadioComponentComponent,
     ChoicesComponent,
     OptionsComponent,
