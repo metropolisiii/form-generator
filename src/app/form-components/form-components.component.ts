@@ -28,7 +28,7 @@ export class FormComponentsComponent {
 
  open(index) {
    this.modalel.setName(this.components[index].name);
-   this.modalService.open(this.modalel.el).result.then((result) => {
+   this.modalService.open(TextInputComponent).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;

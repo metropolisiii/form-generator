@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { FormComponentsComponent } from './form-components/form-components.component';
@@ -11,6 +11,9 @@ import { RadioComponentComponent } from './form-components/components/radio-comp
 import { ChoicesComponent } from './form-components/components/shared/choices/choices.component';
 import { OptionsComponent } from './form-components/components/shared/options/options.component';
 import { TextInputComponent } from './form-components/components/text-input/text-input.component';
+import { ModalHeaderComponent } from './form-components/modal-header/modal-header.component';
+import { ModalFooterComponent } from './form-components/modal-footer/modal-footer.component';
+
 
 @NgModule({
   declarations: [
@@ -22,13 +25,18 @@ import { TextInputComponent } from './form-components/components/text-input/text
     RadioComponentComponent,
     ChoicesComponent,
     OptionsComponent,
-    TextInputComponent
+    TextInputComponent,
+    ModalHeaderComponent,
+    ModalFooterComponent
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  entryComponents: [
+    TextInputComponent
+  ],  
+  providers: [NgbActiveModal],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
