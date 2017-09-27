@@ -24,8 +24,10 @@ export class FormComponentsComponent {
     this.components = [radio, text];
   }
 
+
+ /* Open a modal window with component passed in */ 
+ 
  open(index) {
-  console.log(this.components[index].type);
   this.modalService.open(this.components[index].type).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
