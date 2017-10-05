@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalHeaderComponent } from './modal-header.component';
+import { MainFormComponent } from './main-form.component';
 
-describe('ModalHeaderComponent', () => {
-  let component: ModalHeaderComponent;
-  let fixture: ComponentFixture<ModalHeaderComponent>;
+describe('MainFormComponent', () => {
+  let component: MainFormComponent;
+  let fixture: ComponentFixture<MainFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModalHeaderComponent ]
+      declarations: [ MainFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalHeaderComponent);
+    fixture = TestBed.createComponent(MainFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

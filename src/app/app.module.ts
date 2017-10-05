@@ -11,8 +11,7 @@ import { RadioComponentComponent } from './form-components/components/radio-comp
 import { ChoicesComponent } from './form-components/components/shared/choices/choices.component';
 import { OptionsComponent } from './form-components/components/shared/options/options.component';
 import { TextInputComponent } from './form-components/components/text-input/text-input.component';
-import { ModalHeaderComponent } from './form-components/modal-header/modal-header.component';
-import { ModalFooterComponent } from './form-components/modal-footer/modal-footer.component';
+import { FormService } from './shared/form.service';
 
 
 @NgModule({
@@ -24,9 +23,7 @@ import { ModalFooterComponent } from './form-components/modal-footer/modal-foote
     RadioComponentComponent,
     ChoicesComponent,
     OptionsComponent,
-    TextInputComponent,
-    ModalHeaderComponent,
-    ModalFooterComponent
+    TextInputComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +34,7 @@ import { ModalFooterComponent } from './form-components/modal-footer/modal-foote
     TextInputComponent,
     RadioComponentComponent
   ],  
-  providers: [NgbActiveModal, TextInputComponent],
+  providers: [NgbActiveModal, TextInputComponent, FormService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

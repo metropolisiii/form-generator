@@ -1,5 +1,17 @@
-<form>
-<app-modal-header name="Text Input"></app-modal-header>
+<form (ngSubmit)="onSubmit()" #componentForm="ngForm">
+<div class="container">
+	<div class='row modal-header'>
+			<div class='col'>
+  				<h4 class="modal-title">{{  name }}</h4>
+  			</div>
+  	</div>
+ 	 <div class='row'>
+		  <div class='col-sm-12'>
+			<textarea name='form_label' id='form_label' class='form-control' [(ngModel)]="textInput.label" required></textarea>
+	 	 </div>
+	</div>
+</div>
+
 
 <div class='row'>
 	<div class='col-md-6'>
@@ -8,7 +20,7 @@
 		</div>
 		<div class='form-group'>
 			<label for="placeholder_text">Placeholder text:</label>
-			<input type='text' name='placeholder_text' id='placeholder_text' class='form-control'>
+			<input type='text' name='placeholder_text' id='placeholder_text' class='form-control' [(ngModel)]="textInput.placeholder">
 		</div>
 	</div>
 	<div class='col-md-6'>
@@ -17,13 +29,13 @@
 		</div>	
 		<div class='col-xs-12'>
 			<label class='form-check-label' for='required_chk'>
-				<input type='checkbox' name='required_chk' id='required_chk' class='form-check-input'>
+				<input type='checkbox' name='required_chk' id='required_chk' class='form-check-input' [(ngModel)]="textInput.required">
 				Required
 			</label>				
 		</div>
 		<div class='col-xs-12'>
-			<label class='form-check-label' for='required_chk'>
-				<input type='checkbox' name='readonly_chk' id='readonly_chk' class='form-check-input'>
+			<label class='form-check-label' for='readonly_chk'>
+				<input type='checkbox' name='readonly_chk' id='readonly_chk' class='form-check-input' [(ngModel)]="textInput.readonly">
 				Read only
 			</label>
 		</div>
@@ -32,12 +44,16 @@
 			<label for='question_position'>Question position:</label>
 			<div class='row'>
 				<div class='col-md-4' *ngFor="let position of positions">
-					<input type='radio' name='question_position' [value]='position' id='question_position_{{ position }}' class='form-control' required> {{ position }} 
+					<input type='radio' name='question_position' [value]='position' id='question_position_{{ position }}' class='form-control' [(ngModel)]="textInput.position" required> {{ position }} 
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<app-modal-footer></app-modal-footer>
+<div class="modal-footer">
+	<button type="submit" class="btn btn-outline-dark" [disabled]="!componentForm.form.valid">Save</button>
+	<button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>
+
 </form>
