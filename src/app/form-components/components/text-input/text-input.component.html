@@ -1,3 +1,4 @@
+<form>
 <app-modal-header name="Text Input"></app-modal-header>
 
 <div class='row'>
@@ -30,14 +31,8 @@
 		<div class='col-xs-12'>
 			<label for='question_position'>Question position:</label>
 			<div class='row'>
-				<div class='col-md-4'>
-					<input type='radio' name='question_position' value='top' id='question_position_top' class='form-control'> Top 
-				</div>
-				<div class='col-md-4'>
-					<input type='radio' name='question_position' value='left' id='question_position_left' class='form-control'> Left 
-				</div>
-				<div class='col-md-4'>
-					<input type='radio' name='question_position' value='right' id='question_position_right' class='form-control'> Right 
+				<div class='col-md-4' *ngFor="let position of positions">
+					<input type='radio' name='question_position' [value]='position' id='question_position_{{ position }}' class='form-control' required> {{ position }} 
 				</div>
 			</div>
 		</div>
@@ -45,3 +40,4 @@
 </div>
 
 <app-modal-footer></app-modal-footer>
+</form>

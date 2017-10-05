@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FormComponentsComponent } from './form-components/form-components.component';
@@ -29,13 +30,14 @@ import { ModalFooterComponent } from './form-components/modal-footer/modal-foote
   ],
   imports: [
     BrowserModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    FormsModule
   ],
   entryComponents: [
     TextInputComponent,
     RadioComponentComponent
   ],  
-  providers: [NgbActiveModal],
+  providers: [NgbActiveModal, TextInputComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
