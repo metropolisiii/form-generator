@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { IFormComponent } from '../iformcomponent.type';
 import { TextInput } from './text-input';
 import { FormService } from '../../../shared/form.service';
+import { ModalService } from '../../../shared/modal.service';
 
 @Component({
   selector: 'app-text-input',
@@ -15,7 +16,7 @@ export class TextInputComponent implements OnInit, IFormComponent {
   submitted = false;
   textInput = new TextInput('', '');
   
-  constructor(private formService: FormService) {
+  constructor(private formService: FormService, private modalService: ModalService) {
     this.name = 'Text Input';
     this.type = TextInputComponent;
   }
@@ -23,6 +24,11 @@ export class TextInputComponent implements OnInit, IFormComponent {
   onSubmit(data) {
     this.submitted = true;
     this.formService.saveForm(data);
+    this.close();
+  }
+
+  close(){
+    this.modalService.close();
   }
 
   ngOnInit() {

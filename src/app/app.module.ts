@@ -13,6 +13,7 @@ import { ChoicesComponent } from './form-components/components/shared/choices/ch
 import { OptionsComponent } from './form-components/components/shared/options/options.component';
 import { TextInputComponent } from './form-components/components/text-input/text-input.component';
 import { FormService } from './shared/form.service';
+import { ModalService } from './shared/modal.service'
 
 
 @NgModule({
@@ -36,7 +37,7 @@ import { FormService } from './shared/form.service';
     TextInputComponent,
     RadioComponentComponent
   ],  
-  providers: [NgbActiveModal, TextInputComponent, FormService],
+  providers: [NgbActiveModal, TextInputComponent, FormService, ModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
