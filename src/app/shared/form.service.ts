@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpRequest } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class FormService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  saveForm(){
-    alert('test');
-    //const req = new HttpRequest('POST', 'https://ng-form-generator-76830.firebaseio.com/data.json')
+  saveForm(form){
+    this.http.post('https://ng-form-generator-76830.firebaseio.com/data.json', JSON.stringify(form))
+    	.subscribe(
+    		() => console.log("submitted")
+    	);
   }
 
 }

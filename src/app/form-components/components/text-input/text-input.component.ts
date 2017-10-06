@@ -20,9 +20,9 @@ export class TextInputComponent implements OnInit, IFormComponent {
     this.type = TextInputComponent;
   }
 
-  onSubmit() {
+  onSubmit(data) {
     this.submitted = true;
-    this.formService.saveForm();
+    this.formService.saveForm(data);
   }
 
   ngOnInit() {
